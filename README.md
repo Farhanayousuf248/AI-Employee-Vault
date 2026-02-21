@@ -1,5 +1,9 @@
 # AI-Employee-Vault
 
+**Repo:** https://github.com/Farhanayousuf248/AI-Employee-Vault
+
+**Hackathon Project:** AI Employee Vault using file watcher + Claude/Bonsai prompts
+
 A file-based "AI Employee" task processing system built for hackathon. Drop `.md` files into an Inbox folder, and Python automation detects them, generates structured Claude prompts, and copies them to your clipboard — no API key needed. Designed to work as an Obsidian-style Markdown vault with a human-in-the-loop workflow.
 
 ## Setup
