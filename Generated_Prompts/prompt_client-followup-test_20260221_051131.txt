@@ -1,0 +1,108 @@
+You are my AI Employee working in the AI-Employee-Vault folder.
+
+A new file was detected in Inbox/. Process it using CORE_SKILLS.
+
+## Detected File
+- **Filename:** client-followup-test.md
+- **Detected at:** 2026-02-21 05:11
+- **Content:**
+```
+Follow up with Zara from XYZ Corp about the proposal we sent last week.
+She mentioned wanting to finalize the deal by Friday.
+Call her at 3pm tomorrow.
+```
+
+## Current Dashboard.md
+```
+# AI Employee Dashboard
+
+**AI Employee Activated - Session 1 Video Inspired - Farhana**
+
+---
+
+## Status: 🟢 ACTIVE
+
+## Quick Stats
+| Metric | Count |
+|--------|-------|
+| Inbox Items | 1 |
+| Needs Action | 3 |
+| Completed Today | 3 |
+
+## Pending Actions
+| File | Summary | Priority | Deadline |
+|------|---------|----------|----------|
+| test-note.md | Client follow-up needed | Medium | - |
+| test-email-2.md | Weekly report for boss | **HIGH** | Tomorrow (2026-02-13) |
+| silver-test.md | Prepare presentation for meeting | **HIGH** | Tomorrow (2026-02-14) |
+
+## Recent Activity
+- [DONE] Processed silver-test.md - **HIGH** priority - Presentation prep for tomorrow's meeting
+- [DONE] Processed test-email-2.md - HIGH priority - Boss needs weekly report
+- [DONE] Processed test-note.md - Moved to Needs_Action
+
+---
+*Last Updated: 2026-02-13*
+
+```
+
+## Current Logs/action-log.md (latest)
+```
+# Action Log
+
+All actions performed by AI Employee are logged here.
+
+---
+
+## 2026-02-12
+
+| Time | Action | File | Details |
+|------|--------|------|---------|
+| Session Start | ACTIVATION | - | AI Employee Activated - Session 1 Video Inspired - Farhana |
+| 12:00 | PROCESSED | test-note.md | Summarized client follow-up request |
+| 12:00 | MOVED | test-note.md | Inbox → Needs_Action |
+| 12:00 | UPDATED | Dashboard.md | Reflected current status |
+| 12:05 | READ | test-email-2.md | Boss requesting weekly report by tomorrow |
+| 12:05 | CATEGORIZED | test-email-2.md | HIGH priority - deadline tomorrow |
+| 12:05 | MOVED | test-email-2.md | Inbox → Needs_Action |
+| 12:05 | UPDATED | Dashboard.md | Added pending task - weekly report |
+
+## 2026-02-13
+
+| Time | Action | File | Details |
+|------|--------|------|---------|
+| 14:00 | DETECTED | silver-test.md | New file detected in Inbox by watcher |
+| 14:00 | READ | silver-test.md | Content: "Prepare presentation for meeting tomorrow" |
+| 14:00 | ANALYZED | silver-test.md | Deadline tomorrow — marked HIGH priority |
+| 14:01 | COPIED | silver-test.md | Inbox → Needs_Action (original preserved in Inbox) |
+| 14:01 | UPDATED | Dashboard.md | Added pending task — presentation prep |
+
+
+```
+
+## Your Processing Steps
+1. Read the file content above
+2. <thinking> step-by-step: What is this about? Any deadline keywords (tomorrow, urgent, ASAP, today)? What priority?
+3. Write a short summary (1-2 lines)
+4. Decide priority: LOW / MEDIUM / HIGH
+5. Copy file to Needs_Action/client-followup-test.md with this format:
+   - Header with filename, source, date, priority, deadline
+   - Original content
+   - AI Summary section
+6. Add entries in Logs/action-log.md under date 2026-02-21 with these rows:
+   | 05:11 | DETECTED | client-followup-test.md | New file detected in Inbox |
+   | 05:11 | READ | client-followup-test.md | <what the content says> |
+   | 05:11 | ANALYZED | client-followup-test.md | <priority reasoning> |
+   | 05:11 | COPIED | client-followup-test.md | Inbox -> Needs_Action (original preserved) |
+   | 05:11 | UPDATED | Dashboard.md | Added pending task |
+7. Update Dashboard.md:
+   - Increment "Needs Action" count by 1
+   - Increment "Completed Today" count by 1
+   - Add new row in Pending Actions table
+   - Add new line at top of Recent Activity
+   - Update "Last Updated" date to 2026-02-21
+
+## IMPORTANT RULES
+- Do NOT delete the original file from Inbox/
+- Make ALL changes in the vault files directly
+- Keep the existing data in Dashboard and Logs, only ADD to them
