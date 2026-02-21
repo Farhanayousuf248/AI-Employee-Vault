@@ -97,14 +97,41 @@ def ask_human_approval(filename, sensitive_words):
 
 
 def copy_to_clipboard(text):
-    """Copy text to clipboard if pyperclip available."""
-    if not CLIPBOARD_AVAILABLE:
-        return False
+    """Copy text to clipboard — tries pyperclip first, falls back to clipboard_auto_copy.py."""
+    # Method 1: Direct pyperclip
+    if CLIPBOARD_AVAILABLE:
+        try:
+            pyperclip.copy(text)
+            return True
+        except Exception:
+            pass
+
+    # Method 2: Fallback — use clipboard_auto_copy module
     try:
-        pyperclip.copy(text)
-        return True
+        from clipboard_auto_copy import copy_latest_prompt
+        success, msg = copy_latest_prompt()
+        if success:
+            print(f"  [FALLBACK] {msg}")
+            return True
+    except ImportError:
+        pass
     except Exception:
-        return False
+        pass
+
+    # Method 3: Last resort — subprocess call
+    try:
+        import subprocess
+        result = subprocess.run(
+            [sys.executable, os.path.join(VAULT_ROOT, "clipboard_auto_copy.py")],
+            capture_output=True, text=True, timeout=10
+        )
+        if result.returncode == 0:
+            print(f"  [SUBPROCESS] clipboard_auto_copy.py ran successfully")
+            return True
+    except Exception:
+        pass
+
+    return False
 
 
 # ============================================================
@@ -310,10 +337,10 @@ def process_detected_file(filepath):
     # Step 7: Display status
     print()
     if copied:
-        print("  *** PROMPT COPIED TO CLIPBOARD! ***")
-        print("  Just Ctrl+V in Claude Chat / Bonsai")
+        print("  *** Prompt auto-copied! Paste now in Claude/Bonsai ***")
     else:
         print("  [INFO] Clipboard not available — copy manually")
+        print("  Install pyperclip: pip install pyperclip")
         print()
         print("-" * 55)
         print(prompt)
