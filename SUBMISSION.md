@@ -106,7 +106,6 @@ AI-Employee-Vault/
 ---
 
 ## What Makes This Different
-
 1. **Zero API keys needed** — runs with Claude Chat / Bonsai, no paid APIs
 2. **Human always in control** — sensitive actions blocked until approved
 3. **Everything is a file** — fully transparent, auditable, Obsidian-compatible
