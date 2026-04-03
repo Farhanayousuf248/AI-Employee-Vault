@@ -3,21 +3,62 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
+*.venv/
+venv/
+.env
 
 # VS Code
 .vscode/
 
-# Logs/Temp
+# Obsidian
+.obsidian/
+
+# Git
+.gitignore
+
+# Logs and Temporary files
 *.log
 temp/
 
 # macOS
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
 
 # Windows
 Thumbs.db
 desktop.ini
-
-# OneDrive sync
-*.one
 ~$*
+
+# OneDrive / Sync files
+*.one
+*.tmp
+
+# Sensitive / Secret files (Important for Hackathon)
+credentials.json
+token.json
+*.json
+*.key
+*.pem
+
+# Generated files (optional)
+Generated_Prompts/
+Generated_Posts/
+
+# IDE / Editor files
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
